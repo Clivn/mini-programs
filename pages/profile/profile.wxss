@@ -1,0 +1,43 @@
+.container{
+  margin: 20rpx;
+}
+.userinfo {
+  overflow: hidden;
+}
+.userinfo text{
+  display: block;
+  line-height: 15pt;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+
+.userinfo-nickname {
+  color: #333;
+  font-size: 12pt;
+}
+.userinfo-province{
+  color: #333;
+  font-size: 12pt;
+}
+.userinfo-city{
+  color: #333;
+  font-size: 12pt;
+}
+.com_icon{
+  border-top: 1px #ccc solid;
+  margin: 20rpx 0;
+  padding-top:20rpx;
+}
+.com_icon input{
+  display: inline-block;
+}
+.com_icon switch{
+  display: block
+}
+icon.search{
+  margin-top:10rpx;
+}

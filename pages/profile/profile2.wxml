@@ -1,0 +1,37 @@
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname"><block>用户名：</block>{{userInfo.nickName}}</text>
+    <text class="userinfo-province"><block>城市：</block>{{userInfo.province}}</text>
+    <text class="userinfo-city"><block>区：</block>{{userInfo.city}}</text>
+  </view>
+  <view class="com_icon">
+    <icon type="search" size="23" color="#ccc" class="search" />
+    <input placeholder="点击这里输入" type="number"/>
+    <switch type="switch" bindchange="changeSwitch"/>
+    <button type="primary">按钮</button>
+    
+  </view>
+  <view class="section com_icon">
+    <view class="section__title">地区选择器</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="audio com_icon">
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+  </view>
+
+  <view class="video com_icon">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    <input bindblur="bindInputBlur" placeholder="点击这里输入弹幕"/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+
+  <view class="map com_icon">
+    <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>  
+  </view>
+</view>

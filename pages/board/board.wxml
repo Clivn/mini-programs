@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="slide">
+    <swiper indicator-dots="true" autoplay="true" interval="8000" duration="1000">
+      <!--<swiper-item>
+        <navigator url="../item/item">
+          <image src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2380677316.jpg" mode="aspectFill"/>
+        </navigator>
+      </swiper-item>-->
+      <swiper-item wx:for="{{banner.content}}" wx:key="{{item.id}}">
+        <navigator url="../item/item?id={{item.id}}">
+          <image src="{{item.image}}" mode="aspectFill"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="board" scroll-y="true">
+    <!--<navigator url="../list/list">
+      <view class="board-item">
+        <text>正在热映</text>
+        <image src="../../images/arrowright.png" mode="aspectFill"/>
+      </view>
+    </navigator>-->
+    <navigator url="../list/list?key={{item.key}}&title={{item.title}}" wx:for="{{list}}" wx:key="item.key" hover-class="none">
+      <view class="board-item">
+        <text>{{item.title}}</text>
+        <image src="../../images/arrowright.png" mode="aspectFill"/>
+      </view>
+    </navigator>
+  </view>
+</view>
